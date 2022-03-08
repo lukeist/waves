@@ -1,0 +1,102 @@
+.song-library {
+  //   display: flex;
+  //   flex-direction: column;
+  //   height: 100%;
+  //   position: absolute;
+  position: fixed;
+  width: 25%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  //   width: 20%;
+  min-width: 360px;
+  overflow: auto;
+  box-shadow: 2px 2px 50px rgb(209, 209, 209);
+
+  h4 {
+    font-weight: 400;
+  }
+
+  // push back (hide) the list
+  // transform: translateX(-100%);
+  // transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.library-opening {
+  transform: translateX(0%);
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.library-item {
+  display: flex;
+  padding: 0.5rem;
+  background-color: white;
+  transition: background 0.5s ease;
+
+  img {
+    width: 15%;
+    min-width: 80px;
+  }
+  &:hover {
+    background-color: lightpink;
+    cursor: pointer;
+  }
+}
+// .library-item:hover {
+//   background-color: lightseagreen;
+//   cursor: pointer;
+// }
+
+.current-item {
+  background-color: rgb(255, 227, 231);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.library-info {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+/////////////////////////////////
+// scrollbar styling
+/* width */
+.song-library::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.song-library::-webkit-scrollbar-track {
+  //   background: #ffffff;
+  background: transparent;
+}
+
+/* Handle */
+.song-library::-webkit-scrollbar-thumb {
+  background: lightpink;
+  border-radius: 4px;
+  height: 30px;
+}
+
+/* Handle on hover */
+.song-library::-webkit-scrollbar-thumb:hover {
+  background: pink;
+}
+/////////////////////////////////
+
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: #ff3456 transparent;
+// }
+
+@media screen and (max-width: 768px) {
+  .song-library {
+    width: 100%;
+  }
+}

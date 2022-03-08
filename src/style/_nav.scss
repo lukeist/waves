@@ -1,0 +1,38 @@
+.nav-bar {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  button {
+    cursor: pointer;
+    // border: none;
+    border: 2px solid rgb(69, 69, 69);
+    padding: 1rem;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: rgb(69, 69, 69);
+      color: white;
+    }
+  }
+}
+.logo {
+  text-align: center;
+  span {
+    font-size: 0.8rem;
+  }
+}
+// .nav-icon {
+//   padding: 0rem 1rem;
+// }
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    button {
+      z-index: 10;
+    }
+  }
+}
